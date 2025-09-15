@@ -12,6 +12,7 @@ public class DataInputServiceApplication {
 		SpringApplication.run(DataInputServiceApplication.class, args);
 		printAppName();
 		out.println("Application Running at: http://localhost:1313");
+		out.println("Actuator Running at: http://localhost:1313/actuator");
 	}
 
 	private static void printAppName() {
