@@ -42,7 +42,7 @@ public class PassportServiceImpl implements PassportService
     private String generateUniquePassportNumber() {
         String passportNumber;
         do {
-            long number = 100_000_000_00L + random.nextLong() * 900_000_000_00L; // 11 digits
+            long number = 100_000_000_00L + (long)(random.nextDouble() * 900_000_000_00L); // 11 digits
             passportNumber = "P" + number;
         } while (passportRepository.existsByPassportNumber(passportNumber));
         return passportNumber;

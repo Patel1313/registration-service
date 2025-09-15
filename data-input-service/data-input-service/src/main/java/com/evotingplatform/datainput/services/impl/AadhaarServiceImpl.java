@@ -49,7 +49,7 @@ public class AadhaarServiceImpl
     }
 
     public static String generate12DigitNumber() {
-        long number = 100_000_000_000L + random.nextLong() * 900_000_000_000L;
+        long number = 100_000_000_000L + (long) (random.nextDouble() * 900_000_000_000L);
         return String.valueOf(number);
     }
 }
